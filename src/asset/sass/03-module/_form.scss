@@ -1,0 +1,50 @@
+/*---------------------------------
+  form
+---------------------------------*/
+
+input[type=checkbox] {
+    display: none;
+
+    &:checked {
+        + .chekbox-01 {
+            &::before {
+                background-color: #0070C5;
+                border: 2px solid #0070C5;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.chekbox-01 {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ccc;
+        border-radius: 3px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &::after {
+        content: "";
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        display: block;
+        width: 8px;
+        height: 13px;
+        margin-top: -10px;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 6px;
+        transform: rotate(45deg);
+    }
+}

@@ -1,0 +1,41 @@
+/*---------------------------------
+  detail
+---------------------------------*/
+.detail__header__date {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    > .status {
+        display: inline-block;
+        background-color: #000;
+        color: #fff;
+        margin-right: 20px;
+        font-size: 1.2rem;
+        width: 120px;
+        text-align: center;
+        padding: 3px;
+    }
+
+    > .category {
+        display: inline-block;
+        background-color: #F2F2F2;
+        color: #999;
+        margin-right: 20px;
+        font-size: 1.2rem;
+        width: 120px;
+        text-align: center;
+        padding: 3px;
+    }
+}
+
+.detail__header__hdg {
+    font-size: 2.6rem;
+    margin-top: 20px;
+}
+
+.detail__header__text {
+    font-size: 1.6rem;
+    margin-top: 10px;
+}

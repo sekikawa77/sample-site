@@ -1,0 +1,99 @@
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    color: #000;
+}
+
+a {
+    color: #0070C5;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+img {
+    display: inline;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+em {
+    font-style: normal;
+}
+
+.sp {
+    display: block;
+
+    @include tab {
+        display: none;
+    }
+}
+
+.tab {
+    display: none;
+
+    @include tab {
+        display: block;
+    }
+}
+
+.pc {
+    display: none;
+
+    @include pc {
+        display: block;
+    }
+}
+
+.pc-none {
+    display: block;
+
+    @include pc {
+        display: none;
+    }
+}
+
+._align-left {
+    text-align: left !important;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.section {
+    padding: 60px 0;
+
+    &.bg-01 {
+        background-color: #EEF4FB;
+    }
+}
+
+.inner {
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+.roboto {
+    font-family: 'Montserrat', sans-serif;
+}

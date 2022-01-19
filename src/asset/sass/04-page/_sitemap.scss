@@ -1,0 +1,48 @@
+/*---------------------------------
+  sitemap
+---------------------------------*/
+
+.sitemap {
+    display: flex;
+    border-right: 1px solid #ccc;
+}
+
+.sitemap__list {
+    width: 25%;
+    padding-left: 40px;
+    border-left: 1px solid #ccc;
+
+    > li {
+        margin-top: 20px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        > a {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}
+
+.sitemap__list__sub {
+    margin-top: 10px;
+
+    > li {
+        line-height: 1.87;
+        
+        > a {
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-decoration: none;
+            position: relative;
+
+            &::before {
+                content: "-";
+                padding-right: 5px;
+            }
+        }
+    }
+}

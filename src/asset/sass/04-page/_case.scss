@@ -1,0 +1,57 @@
+/*---------------------------------
+  case
+---------------------------------*/
+
+.case-detail__header {
+    margin-top: 40px;
+}
+
+.case-detail__header__hdg {
+    font-size: 2.2rem;
+}
+
+.case-detail__header__text {
+    font-size: 1.6rem;
+}
+
+.case-detail__item {
+    margin-top: 40px;
+}
+
+.case-detail__image {
+    margin-top: 20px;
+}
+
+.case-detail__text {
+    margin-top: 20px;
+    font-size: 1.6rem;
+
+    p {
+        margin-top: 1em;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.case-detail__company__hdg {
+    font-size: 1.8rem;
+}
+
+.case-detail__company {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.case-detail__company__desc {
+    > div {
+        display: flex;
+        font-size: 1.6rem;
+
+        > dt {
+            width: 120px;
+        }
+    }
+}

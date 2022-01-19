@@ -1,0 +1,46 @@
+/*---------------------------------
+  column
+---------------------------------*/
+
+.column__header__hdg {
+    font-size: 2.6rem;
+}
+
+.column__header__date {
+    font-size: 1.6rem;
+    margin-top: 20px;
+}
+
+.column__header__category {
+    line-height: 1;
+    width: 116px;
+    display: inline-block;
+    background-color: #F2F2F2;
+    color: 1.2rem;
+    color: #999;
+    padding: 6px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.column__image {
+    margin-top: 20px;
+}
+
+.column__item {
+    margin-top: 40px;
+}
+
+.column__text {
+    margin-top: 20px;
+
+    > p {
+        font-size: 1.6rem;
+        margin-top: 1em;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+/*---------------------------------
+  event
+---------------------------------*/
+.event__item {
+    margin-top: 40px;
+}
+
+.event__btn {
+    margin: 40px auto 0;
+    width: 380px;
+    
+    > a {
+        font-size: 1.6rem;
+    }
+}

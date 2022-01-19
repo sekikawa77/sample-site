@@ -1,0 +1,159 @@
+/*---------------------------------
+  btn
+---------------------------------*/
+
+.btn-01 {
+    > a {
+        text-decoration: none;
+        border: 1px solid #0070C5;
+        color: #0070C5;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-weight: bold;
+        background-color: #fff;
+
+        > span {
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-right: 2px solid #0070C5;
+                border-bottom: 2px solid #0070C5;
+                transform: rotate(-45deg);
+                display: inline-block;
+                margin-right: 10px;
+                margin-bottom: 2px;
+              }
+        }
+
+    }
+}
+
+.btn-02 {
+    > a {
+        text-decoration: none;
+        border: 1px solid transparent;
+        color: #fff;
+        background-color: #0070C5;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-weight: bold;
+
+        > span {
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-right: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                transform: rotate(-45deg);
+                display: inline-block;
+                margin-right: 10px;
+                margin-bottom: 2px;
+              }
+        }
+    }
+}
+
+.btn-03 {
+    > a {
+        text-decoration: none;
+        border: 1px solid transparent;
+        color: #fff;
+        background-color: #0070C5;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-weight: bold;
+
+        > span {
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-right: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                transform: rotate(-45deg);
+                display: inline-block;
+                margin-right: 30px;
+                margin-bottom: 3px;
+              }
+        }
+    }
+}
+
+.btn-04 {
+    > a {
+        text-decoration: none;
+        border: 1px solid #0070C5;
+        color: #0070C5;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-weight: bold;
+
+        > span {
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-right: 2px solid #0070C5;
+                border-bottom: 2px solid #0070C5;
+                transform: rotate(-45deg);
+                display: inline-block;
+                margin-right: 10px;
+                margin-bottom: 2px;
+              }
+        }
+
+    }
+}
+
+.btn-05 {
+    > a {
+        text-decoration: none;
+        border: 1px solid transparent;
+        color: #fff;
+        background-color: #0070C5;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-weight: bold;
+
+        > span {
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-right: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                transform: rotate(-45deg);
+                display: inline-block;
+                margin-right: 40px;
+                margin-bottom: 1px;
+              }
+        }
+    }
+}

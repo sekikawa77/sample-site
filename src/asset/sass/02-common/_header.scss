@@ -1,0 +1,74 @@
+/*---------------------------------
+  header
+---------------------------------*/
+.header {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #fff;
+  
+    @include tab {
+
+    }
+
+    @include pc {
+
+    }
+}
+
+.header__nav {
+  > ul {
+    display: flex;
+
+    > li {
+      margin: 0 15px;
+
+      > a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: inherit;
+        font-weight: bold;
+ 
+      }
+    }
+  }
+}
+
+.header__primary {
+  display: flex;
+  align-items: center;
+}
+
+.header__tel {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: right;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 10px;
+    height: 15px;
+    background: url(../images/header-contact-tel-icon.png) no-repeat left top;
+    position: absolute;
+    top: 3px;
+    left: -15px;
+  }
+
+  > span {
+    display: block;
+    font-size: 1.2rem;
+  }
+}
+
+.header__btn {
+  width: 130px;
+  margin-left: 20px;
+
+  > a {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+}
