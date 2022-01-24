@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head> 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/asset/css/master.min.css">
-    <script src="/asset/js/jquery-3.6.0.min.js" defer></script>
-    <script src="/asset/js/run.js" defer></script>
-    <title>sample-site</title>
-    <meta name="description" content="">
-
-  </head>
-  <body>
-    <header class="header">
-      <p class="header__logo">
-        <a href="/"><img src="/asset/images/logo.png" alt=""></a>
-      </p>
-      <nav class="header__nav">
-        <ul> 
-          <li><a href="/">ホーム </a></li>
-          <li><a href="/">特徴 </a></li>
-          <li><a href="/">サービス </a></li>
-          <li><a href="/">事例 </a></li>
-          <li><a href="/">セミナー／イベント </a></li>
-          <li><a href="/">会社情報 </a></li>
-        </ul>
-      </nav>
-
-      <div class="header__primary">
-        <p class="header__tel roboto">0123-456-7890<span>平日00:00〜00:00</span></p>
-        <p class="header__btn btn-01"><a href="#"><span>お役立ち資料</span></a></p>
-        <p class="header__btn btn-02"><a href="#"><span>お問い合わせ</span></a></p>
-      </div>
-    </header>
+<?php get_header(); ?>
 
     <main class="main">
       <section class="top__mv">
@@ -57,26 +19,26 @@
           <ul class="top__features__list">
             <li class="top__features__list__item">
                 <div class="top__features__list__item__image">
-                  <img src="/asset/images/top/img-features-01.png" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/asset/images/top/img-features-01.png" alt="">
                 </div>
                 <p class="top__features__list__item__text">テキストテキストテキストテキストテキスト</p>
             </li>
             <li class="top__features__list__item">
               <div class="top__features__list__item__image">
-                <img src="/asset/images/top/img-features-02.png" alt="">
+                <img src="<?php echo get_template_directory_uri();?>/asset/images/top/img-features-02.png" alt="">
               </div>
               <p class="top__features__list__item__text">テキストテキストテキストテキストテキスト</p>
             </li>
             <li class="top__features__list__item">
               <div class="top__features__list__item__image">
-                <img src="/asset/images/top/img-features-03.png" alt="">
+                <img src="<?php echo get_template_directory_uri();?>/asset/images/top/img-features-03.png" alt="">
               </div>
               <p class="top__features__list__item__text">テキストテキストテキストテキストテキスト</p>
             </li>
           </ul>
           
           <p class="top__section__btn btn-02">
-            <a href="/features/"><span>詳しく見る</span></a>
+            <a href="<?php echo home_url('/features/'); ?>"><span>詳しく見る</span></a>
           </p>
         </div>
       </section>
@@ -88,9 +50,9 @@
 
           <ul class="top__service__list col2">
             <li class="top__service__list__item">
-              <a href="/service/detail/">
+              <a href="<?php echo home_url('/service/service-01/'); ?>">
                 <div class="top__service__list__item__icon">
-                  <img src="/asset/images/top/icon-service.png" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/asset/images/top/icon-service.png" alt="">
                 </div>
                 <div class="top__service__list__item__content">
                   <h3 class="top__service__list__item__hdg">サービス1サービス1</h3>
@@ -100,9 +62,9 @@
 
             </li>
             <li class="top__service__list__item">
-              <a href="/service/detail/">
+              <a href="<?php echo home_url('/service/service-01/'); ?>">
                 <div class="top__service__list__item__icon">
-                  <img src="/asset/images/top/icon-service.png" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/asset/images/top/icon-service.png" alt="">
                 </div>
                 <div class="top__service__list__item__content">
                   <h3 class="top__service__list__item__hdg">サービス2サービス2</h3>
@@ -115,9 +77,9 @@
 
           <ul class="top__service__list col3">
             <li class="top__service__list__item">
-              <a href="/service/detail/">
+              <a href="<?php echo home_url('/service/service-01/'); ?>">
                 <div class="top__service__list__item__icon">
-                  <img src="/asset/images/top/icon-service.png" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/asset/images/top/icon-service.png" alt="">
                 </div>
                 <div class="top__service__list__item__content">
                   <h3 class="top__service__list__item__hdg">サービス3サービス3</h3>
@@ -127,9 +89,9 @@
 
             </li>
             <li class="top__service__list__item">
-              <a href="/service/detail/">
+              <a href="<?php echo home_url('/service/service-01/'); ?>">
                 <div class="top__service__list__item__icon">
-                  <img src="/asset/images/top/icon-service.png" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/asset/images/top/icon-service.png" alt="">
                 </div>
                 <div class="top__service__list__item__content">
                   <h3 class="top__service__list__item__hdg">サービス4サービス4</h3>
@@ -139,9 +101,9 @@
 
             </li>
             <li class="top__service__list__item">
-              <a href="/service/detail/">
+              <a href="<?php echo home_url('/service/service-01/'); ?>">
                 <div class="top__service__list__item__icon">
-                  <img src="/asset/images/top/icon-service.png" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/asset/images/top/icon-service.png" alt="">
                 </div>
                 <div class="top__service__list__item__content">
                   <h3 class="top__service__list__item__hdg">サービス5サービス5</h3>
@@ -153,7 +115,7 @@
           </ul>
 
           <p class="top__section__btn btn-01">
-            <a href="/service/"><span>詳しく見る</span></a>
+            <a href="<?php echo home_url('/service/'); ?>"><span>詳しく見る</span></a>
           </p>
         </div>
       </section>
@@ -259,7 +221,7 @@
           </ul>
 
           <p class="top__section__btn btn-01">
-            <a href="/case/"><span>詳しく見る</span></a>
+            <a href="<?php echo home_url('/case/'); ?>"><span>詳しく見る</span></a>
           </p>
 
         </div>
@@ -368,7 +330,7 @@
           </ul>
 
           <p class="top__section__btn btn-01">
-            <a href="/event/"><span>すべて見る</span></a>
+            <a href="<?php echo home_url('/event/'); ?>"><span>すべて見る</span></a>
           </p>
         </div>
       </section>
@@ -378,125 +340,44 @@
           <h2 class="hdg-lv2-01">お知らせ</h2>
           <p class="hdg-lv2__lead">テキストテキストテキストテキストテキスト</p>
 
+          <?php
+            $args = array(
+              'post_type' => 'news',
+              'posts_per_page' => 5,
+            );
+
+            $the_query = new WP_Query($args);
+          ?>
+
           <ul class="list__news">
+            <?php if($the_query -> have_posts()):
+              while($the_query -> have_posts()) : $the_query -> the_post();
+            ?>
             <li class="list__news__item">
-              <a href="/news/detail/">
+              <a href="<?php the_permalink(); ?>">
                 <div class="list__news__item__meta">
-                  <p class="list__news__item__date">2022年00月00日（水）</p>
-                  <p class="list__news__item__cate">カテゴリ1</p>
+                  <p class="list__news__item__date"><?php echo get_the_date(); ?></p>
+                  <p class="list__news__item__cate">
+                    <?php
+                      $term = get_the_terms($post->ID,'news-cate');
+                      echo $term[0]->name;
+                    ?>
+                  </p>
                 </div>
-                <p class="list__news__item__hdg">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <p class="list__news__item__hdg"><?php the_title(); ?></p>
               </a>
             </li>
-            <li class="list__news__item">
-              <a href="/news/detail/">
-                <div class="list__news__item__meta">
-                  <p class="list__news__item__date">2022年00月00日（水）</p>
-                  <p class="list__news__item__cate">カテゴリ2</p>
-                </div>
-                <p class="list__news__item__hdg">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </a>
-            </li>
-            <li class="list__news__item">
-              <a href="/news/detail/">
-                <div class="list__news__item__meta">
-                  <p class="list__news__item__date">2022年00月00日（水）</p>
-                  <p class="list__news__item__cate">カテゴリ3</p>
-                </div>
-                <p class="list__news__item__hdg">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </a>
-            </li>
-            <li class="list__news__item">
-              <a href="/news/detail/">
-                <div class="list__news__item__meta">
-                  <p class="list__news__item__date">2022年00月00日（水）</p>
-                  <p class="list__news__item__cate">カテゴリ1</p>
-                </div>
-                <p class="list__news__item__hdg">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </a>
-            </li>
-            <li class="list__news__item">
-              <a href="/news/detail/">
-                <div class="list__news__item__meta">
-                  <p class="list__news__item__date">2022年00月00日（水）</p>
-                  <p class="list__news__item__cate">カテゴリ2</p>
-                </div>
-                <p class="list__news__item__hdg">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </a>
-            </li>
+
+            <?php
+                endwhile;
+              endif;
+              wp_reset_postdata();
+            ?>
           </ul>
         </div>
       </section>
 
-      <section class="contact">
-        <div class="inner">
-          <h2 class="hdg-lv2-01">お問い合わせ</h2>
-          <p class="hdg-lv2__lead">テキストテキストテキストテキストテキストテキストテキスト</p>
-          <p class="contact__btn btn-03">
-            <a href="#"><span>お問い合わせ</span></a>
-          </p>
-
-          <div class="contact__tel">
-            <p class="contact__tel__text">お電話でのお問い合わせ</p>
-            <p class="contact__tel__phone roboto">0123-456-789​</p>
-            <p class="contact__tel__time">（平日00:00〜00:00）</p>
-          </div>
-
-          <div class="contact__tel__box">
-            <div class="contact__tel__box__col2">
-              <div class="contact__tel__box__col">
-                <p class="contact__tel__box__free">無料</p>
-                <p class="contact__tel__box__text">テキストテキストテキストテキストテキストテキスト</p>
-              </div>
-              <div class="contact__tel__box__col">
-                <p class="contact__tel__box__btn btn-04">
-                  <a href="#"><span>お役立ち資料ダウンロード</span></a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <?php get_template_part('template-parts/contact'); ?>
     </main>
 
-    <footer class="footer"> 
-      <div class="inner">
-        <div class="footer__item">
-          <p class="footer__adress">株式会社〇〇〇〇<br>〒000-0000 住所テキストテキストテキストテキストテキストテキストテキスト</p>
-
-          <div class="footer__navs">
-            <ul class="footer__links">
-              <li><a href="#">ホーム</a></li>
-              <li><a href="#">特徴</a></li>
-            </ul>
-            <ul class="footer__links">
-              <li><a href="#">サービス</a>
-                <ul class="footer__links__sub">
-                  <li><a href="#">サービス1サービス1</a></li>
-                  <li><a href="#">サービス2サービス2</a></li>
-                  <li><a href="#">サービス3サービス3</a></li>
-                  <li><a href="#">サービス4サービス4</a></li>
-                  <li><a href="#">サービス5サービス5</a></li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="footer__links">
-              <li><a href="#">事例</a></li>
-              <li><a href="#">セミナー／イベント</a></li>
-              <li><a href="#">コラム</a></li>
-              <li><a href="#">資料ダウンロード</a></li>
-            </ul>
-            <ul class="footer__links">
-              <li><a href="#">会社情報</a></li>
-              <li><a href="#">お知らせ</a></li>
-              <li><a href="#">プライバシーポリシー</a></li>
-              <li><a href="#">サイトマップ</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="footer__copy"><small>© 2022 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</small></p>
-      </div>
-    </footer>
-  </body>
-</html>
+<?php get_footer(); ?>

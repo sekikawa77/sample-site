@@ -40,7 +40,7 @@ gulp.task('sass', function(done){
     ]))
     .pipe(cssmin())
     .pipe(rename({extname: '.min.css'}))
-    .pipe(gulp.dest('./asset/css'))
+    .pipe(gulp.dest('./wordpress/wp-content/themes/samplesite/asset/css'))
     .pipe(browserSync.stream());
 
     done();
@@ -51,7 +51,7 @@ gulp.task('js', function(done){
     .pipe(plumber())
     // .pipe(uglify())
     // .pipe(rename({extname: '.min.js'}))
-    .pipe(gulp.dest('./asset/js'))
+    .pipe(gulp.dest('./wordpress/wp-content/themes/samplesite/asset/js'))
     .pipe(browserSync.stream());
 
     done();
@@ -73,7 +73,7 @@ gulp.task('imagemin', function(done){
             imagemin.gifsicle({ optimizationLevel: 3})
         ])
     )
-    .pipe(gulp.dest('asset/images'));
+    .pipe(gulp.dest('./wordpress/wp-content/themes/samplesite/asset/images'));
 
     done();
 });
