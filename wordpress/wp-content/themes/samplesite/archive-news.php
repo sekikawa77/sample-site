@@ -14,7 +14,7 @@
 
         <ul class="breadcrumb">
           <li>
-            <a href="/">ホーム</a>
+            <a href="<?php echo home_url('/'); ?>">ホーム</a>
           </li>
           <li>お知らせ</li>
         </ul>
@@ -47,8 +47,10 @@
             </dl>
 
             <?php
+              $paged = get_query_var('paged')? get_query_var('paged') : 1;
               $args = array(
                 'post_type' => 'news',
+                'paged' => $paged,
                 'posts_per_page' => 10,
               );
 

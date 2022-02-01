@@ -126,98 +126,53 @@
           <p class="hdg-lv2__lead">テキストテキストテキストテキストテキスト</p>
 
           <ul class="list__card-01">
-            <li class="list__card-01__item">
-              <a href="/case/detail/">
-                <div class="list__card-01__image">
-                  <img src="/asset/images/top/img-case.jpg" alt="">
-  
-                  <span class="list__card-01__logo">
-                    <img src="/asset/images/top/logo-case.png" alt="">
-                  </span>
-                </div>
-                <div class="list__card-01__content">
-                  <h3 class="list__card-01__hdg">テキストテキステキストトテキストテキストテキスト</h3>
-                  <p class="list__card-01__name">〇〇〇〇株式会社</p>
-  
-                  <dl class="list__desc-01">
-                    <div>
-                      <dt>業種</dt>
-                      <dd>製造業</dd>
-                    </div>
-                    <div>
-                      <dt>従業員数</dt>
-                      <dd>1～10人</dd>
-                    </div>
-                    <div>
-                      <dt>課題</dt>
-                      <dd>〇〇〇〇〇〇〇〇</dd>
-                    </div>
-                  </dl>
-                </div>
-              </a>
-            </li>
+          <?php
+            $args = array(
+              'post_type' => 'case',
+              'posts_per_page' => 3
+            );
 
+            $the_query = new WP_Query($args);
+          ?>
+          <?php if($the_query -> have_posts()):
+            while($the_query -> have_posts()) : $the_query -> the_post();
+          ?>
             <li class="list__card-01__item">
-              <a href="/case/detail/">
+              <a href="<?php the_permalink(); ?>">
                 <div class="list__card-01__image">
-                  <img src="/asset/images/top/img-case.jpg" alt="">
+                  <img src="<?php the_field('company_image'); ?>" alt="">
   
                   <span class="list__card-01__logo">
-                    <img src="/asset/images/top/logo-case.png" alt="">
+                    <img src="<?php the_field('conpany_logo'); ?>" alt="">
                   </span>
                 </div>
                 <div class="list__card-01__content">
-                  <h3 class="list__card-01__hdg">テキストテキステキストトテキストテキストテキスト</h3>
-                  <p class="list__card-01__name">〇〇〇〇株式会社</p>
+                  <h3 class="list__card-01__hdg"><?php the_title(); ?></h3>
+                  <p class="list__card-01__name"><?php the_field('company_name'); ?></p>
   
                   <dl class="list__desc-01">
                     <div>
                       <dt>業種</dt>
-                      <dd>製造業</dd>
+                      <dd><?php the_field('industry'); ?></dd>
                     </div>
                     <div>
                       <dt>従業員数</dt>
-                      <dd>1～10人</dd>
+                      <dd><?php the_field('employee'); ?></dd>
                     </div>
                     <div>
                       <dt>課題</dt>
-                      <dd>〇〇〇〇〇〇〇〇</dd>
+                      <dd><?php the_field('theme'); ?></dd>
                     </div>
                   </dl>
                 </div>
               </a>
             </li>
+            <?php
+                endwhile;
+              endif;
+              wp_reset_postdata();
+            ?>
 
-            <li class="list__card-01__item">
-              <a href="/case/detail/">
-                <div class="list__card-01__image">
-                  <img src="/asset/images/top/img-case.jpg" alt="">
-  
-                  <span class="list__card-01__logo">
-                    <img src="/asset/images/top/logo-case.png" alt="">
-                  </span>
-                </div>
-                <div class="list__card-01__content">
-                  <h3 class="list__card-01__hdg">テキストテキステキストトテキストテキストテキスト</h3>
-                  <p class="list__card-01__name">〇〇〇〇株式会社</p>
-  
-                  <dl class="list__desc-01">
-                    <div>
-                      <dt>業種</dt>
-                      <dd>製造業</dd>
-                    </div>
-                    <div>
-                      <dt>従業員数</dt>
-                      <dd>1～10人</dd>
-                    </div>
-                    <div>
-                      <dt>課題</dt>
-                      <dd>〇〇〇〇〇〇〇〇</dd>
-                    </div>
-                  </dl>
-                </div>
-              </a>
-            </li>
           </ul>
 
           <p class="top__section__btn btn-01">
@@ -229,7 +184,7 @@
 
       <section class="section bg-01">
         <div class="inner">
-          <h2 class="hdg-lv2-01">事例</h2>
+          <h2 class="hdg-lv2-01">セミナー／イベント</h2>
           <p class="hdg-lv2__lead">テキストテキストテキストテキストテキスト</p>
 
           <ul class="list__card-01">
@@ -374,6 +329,10 @@
               wp_reset_postdata();
             ?>
           </ul>
+
+          <p class="top__section__btn btn-01">
+            <a href="<?php echo home_url('/news/'); ?>"><span>すべて見る</span></a>
+          </p>
         </div>
       </section>
 

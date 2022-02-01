@@ -22,4 +22,19 @@ function custom_post_type() {
             'hierarchical' => true,
         )
     );
+
+    register_post_type('case',
+        array(
+            'label' => '事例',
+            'public' => true,
+            'hierarchical' => true,
+            'has_archive' => true,
+            'supports' => array('title', 'editor', 'thumbnail')
+        )
+    );
+
+    register_taxonomy(
+        'case-cate',
+        'case'
+    );
 };

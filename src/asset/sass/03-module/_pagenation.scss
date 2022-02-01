@@ -1,39 +1,81 @@
 /*---------------------------------
   pagenation
 ---------------------------------*/
-
-.pagination {
-    margin-top: 40px;
-}
-
-.nav-links {
-    > ul.page-numbers {
+main {
+    .wp-pagenavi {
+        margin-top: 40px;
         display: flex;
         justify-content: center;
         gap: 5px;
+    
+        a,
+        span {
+            display: flex;
+            width: 50px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
+            color: #0070C5;
+            font-weight: bold;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            text-decoration: none;
+        }
+    
+        a {
+            position: relative;
+
+            &:hover {
+                border: 1px solid #ccc;
+            }
+
+            &.previouspostslink {
+                margin-right: 40px;
+                color: transparent;
+                &::after {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-bottom: 2px solid #0070C5;
+                    border-left: 2px solid #0070C5;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                }
+            }
+
+            &.nextpostslink {
+                margin-left: 40px;
+                color: transparent;
+                
+                &::after {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-top: 2px solid #0070C5;
+                    border-right: 2px solid #0070C5;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                }
+
+            }
+        }
+
+        span {
+            &.current {
+                border-color: #0070C5;
+                background-color: #0070C5;
+                color: #fff;
+            }
+
+        }
     }
 }
 
 
-a.page-numbers,
-span.page-numbers {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.6rem;
-    color: #0070C5;
-    font-weight: bold;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    text-decoration: none;
-}
 
-span.page-numbers {
-    &.current {
-        border: 1px solid #0070C5;
-        background-color: #0070C5;
-        color: #fff;
-    }
-}
+
