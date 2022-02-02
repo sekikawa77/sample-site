@@ -45,7 +45,7 @@ Template Name: service-01
             <div class="point-detail__item">
               <h3 class="hdg-lv2-03" id="anc-01">テキスト1テキスト1テキスト1テキスト1テキスト1テキスト1</h3>
               <div class="point-detail__image">
-                <img src="/asset/images/service/service-detail/img-service.png" alt="">
+                <img src="<?php echo get_template_directory_uri();?>/asset/images/service/service-detail/img-service.png" alt="">
               </div>
               <div class="point-detail__text">
                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -55,7 +55,7 @@ Template Name: service-01
             <div class="point-detail__item">
               <h3 class="hdg-lv2-03" id="anc-02">テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2</h3>
               <div class="point-detail__image">
-                <img src="/asset/images/service/service-detail/img-service.png" alt="">
+                <img src="<?php echo get_template_directory_uri();?>/asset/images/service/service-detail/img-service.png" alt="">
               </div>
               <div class="point-detail__text">
                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -65,7 +65,7 @@ Template Name: service-01
             <div class="point-detail__item">
               <h3 class="hdg-lv2-03" id="anc-03">テキスト3テキスト3テキスト3テキスト3テキスト3</h3>
               <div class="point-detail__image">
-                <img src="/asset/images/service/service-detail/img-service.png" alt="">
+                <img src="<?php echo get_template_directory_uri();?>/asset/images/service/service-detail/img-service.png" alt="">
               </div>
               <div class="point-detail__text">
                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>

@@ -37,4 +37,24 @@ function custom_post_type() {
         'case-cate',
         'case'
     );
+
+    register_post_type('column',
+        array(
+            'label' => 'コラム',
+            'public' => true,
+            'hierarchical' => true,
+            'has_archive' => true,
+            'supports' => array('title', 'editor', 'thumbnail')
+        )
+    );
+
+    register_taxonomy(
+        'column-cate',
+        'column',
+        array(
+            'label' => 'カテゴリー',
+            'public' => true,
+            'hierarchical' => true,
+        )
+    );
 };
