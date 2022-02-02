@@ -17,10 +17,10 @@ Template Name: service-01
 
         <ul class="breadcrumb">
           <li>
-            <a href="/">ホーム</a>
+            <a href="<?php echo home_url('/'); ?>">ホーム</a>
           </li>
           <li>
-            <a href="/service/">サービス</a>
+            <a href="<?php echo home_url('/service/'); ?>">サービス</a>
           </li>
           <li>サービス1サービス1</li>
         </ul>

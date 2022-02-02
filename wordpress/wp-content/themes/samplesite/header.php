@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/asset/css/master.min.css">
     <script src="<?php echo get_template_directory_uri();?>/asset/js/jquery-3.6.0.min.js" defer></script>
     <script src="<?php echo get_template_directory_uri();?>/asset/js/run.js" defer></script>

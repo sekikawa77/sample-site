@@ -29,7 +29,7 @@ function custom_post_type() {
             'public' => true,
             'hierarchical' => true,
             'has_archive' => true,
-            'supports' => array('title', 'editor', 'thumbnail')
+            'supports' => array('title')
         )
     );
 
@@ -44,7 +44,7 @@ function custom_post_type() {
             'public' => true,
             'hierarchical' => true,
             'has_archive' => true,
-            'supports' => array('title', 'editor', 'thumbnail')
+            'supports' => array('title')
         )
     );
 
@@ -56,5 +56,20 @@ function custom_post_type() {
             'public' => true,
             'hierarchical' => true,
         )
+    );
+
+    register_post_type('event',
+        array(
+            'label' => 'セミナー／イベント',
+            'public' => true,
+            'hierarchical' => true,
+            'has_archive' => true,
+            'supports' => array('title')
+        )
+    );
+
+    register_taxonomy(
+        'event-cate',
+        'event'
     );
 };

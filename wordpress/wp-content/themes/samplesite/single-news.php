@@ -11,12 +11,12 @@
 
         <ul class="breadcrumb">
           <li>
-            <a href="/">ホーム</a>
+            <a href="<?php echo home_url('/'); ?>">ホーム</a>
           </li>
           <li>
-            <a href="/news/">お知らせ</a>
+            <a href="<?php echo home_url('/news/'); ?>">お知らせ</a>
           </li>
-          <li>テキストテキストテキストテキストテキストテキストテキスト</li>
+          <li><?php the_title(); ?></li>
         </ul>
       </section>
       

@@ -17,7 +17,7 @@ Template Name: service
 
         <ul class="breadcrumb">
           <li>
-            <a href="/">ホーム</a>
+            <a href="<?php echo home_url('/'); ?>">ホーム</a>
           </li>
           <li>サービス</li>
         </ul>

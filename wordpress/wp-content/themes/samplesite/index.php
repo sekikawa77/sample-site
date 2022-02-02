@@ -188,100 +188,107 @@
           <p class="hdg-lv2__lead">テキストテキストテキストテキストテキスト</p>
 
           <ul class="list__card-01">
+          <?php
+            $args = array(
+              //'numberposts' => -1,
+              'post_type' => 'event',
+              'order' => 'DESC',
+              'orderby' => 'event_deadline',
+              'meta_key' => 'event_deadline',
+              'meta_value' => date('Y-m-d'),
+              'meta_compare' => '>=',
+            );
+
+            $posts = get_posts($args);
+            if($posts) : foreach ($posts as $post) : setup_postdata($post);
+          ?>
+
             <li class="list__card-01__item">
               <div class="list__card-01__image">
-                <img src="/asset/images/top/img-event.jpg" alt="">
+                <img src="<?php the_field('event_image'); ?>" alt="">
 
                 <span class="list__card-01__flag">
-                  <img src="/asset/images/top/img-event-flag-01.png" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/asset/images/top/img-event-flag-01.png" alt="">
                 </span>
               </div>
               <div class="list__card-01__content">
-                <p class="list__card-01__date">2022年〇月〇日（水）00:00-00:00</p>
-                <h3 class="list__card-01__hdg">テキストテキステキストトテキストテキストテキスト</h3>
+                <p class="list__card-01__date"><?php the_field('event_date'); ?></p>
+                <h3 class="list__card-01__hdg"><?php the_title(); ?></h3>
 
                 <dl class="list__desc-01">
                   <div>
                     <dt>場所</dt>
-                    <dd>〇〇ホールディングス</dd>
+                    <dd><?php the_field('event_venue'); ?></dd>
                   </div>
                   <div>
                     <dt>テーマ</dt>
-                    <dd>〇〇〇</dd>
+                    <dd><?php the_field('event_theme'); ?></dd>
                   </div>
                   <div>
                     <dt>対象者</dt>
-                    <dd>〇〇〇</dd>
+                    <dd><?php the_field('event_person'); ?></dd>
                   </div>
                 </dl>
 
                 <p class="list__card-01__btn btn-05">
-                    <a href="/event/detail/"><span>お申込み</span></a>
+                    <a href="<?php the_permalink(); ?>"><span>お申込み</span></a>
                 </p>
               </div>
             </li>
+          <?php
+              endforeach;
+            endif;
+            wp_reset_postdata();
+          ?>
 
-            <li class="list__card-01__item">
-              <div class="list__card-01__image">
-                <img src="/asset/images/top/img-event.jpg" alt="">
+          <?php
+            $args = array(
+              //'numberposts' => -1,
+              'post_type' => 'event',
+              'order' => 'DESC',
+              'orderby' => 'event_deadline',
+              'meta_key' => 'event_deadline',
+              'meta_value' => date('Y-m-d'),
+              'meta_compare' => '<',
+            );
 
-                <span class="list__card-01__flag">
-                  <img src="/asset/images/top/img-event-flag-01.png" alt="">
-                </span>
-              </div>
-              <div class="list__card-01__content">
-                <p class="list__card-01__date">2022年〇月〇日（水）00:00-00:00</p>
-                <h3 class="list__card-01__hdg">テキストテキステキストトテキストテキストテキスト</h3>
- 
-                <dl class="list__desc-01">
-                  <div>
-                    <dt>場所</dt>
-                    <dd>〇〇ホールディングス</dd>
-                  </div>
-                  <div>
-                    <dt>テーマ</dt>
-                    <dd>〇〇〇</dd>
-                  </div>
-                  <div>
-                    <dt>対象者</dt>
-                    <dd>〇〇〇</dd>
-                  </div>
-                </dl>
-
-                <p class="list__card-01__btn btn-05">
-                  <a href="/event/detail/"><span>お申込み</span></a>
-                </p>
-              </div>
-            </li>
-
+            $posts = get_posts($args);
+            if($posts) : foreach ($posts as $post) : setup_postdata($post);
+          ?>
             <li class="list__card-01__item is-finished">
               <div class="list__card-01__image">
-                <img src="/asset/images/top/img-event.jpg" alt="">
+                <img src="<?php the_field('event_image'); ?>" alt="">
 
                 <span class="list__card-01__flag">
-                  <img src="/asset/images/top/img-event-flag-02.png" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/asset/images/top/img-event-flag-02.png" alt="">
                 </span>
               </div>
               <div class="list__card-01__content">
-                <p class="list__card-01__date">2022年〇月〇日（水）00:00-00:00</p>
-                <h3 class="list__card-01__hdg">テキストテキステキストトテキストテキストテキスト</h3>
+                <p class="list__card-01__date"><?php the_field('event_date'); ?></p>
+                <h3 class="list__card-01__hdg"><?php the_title(); ?></h3>
 
                 <dl class="list__desc-01">
                   <div>
                     <dt>場所</dt>
-                    <dd>〇〇ホールディングス</dd>
+                    <dd><?php the_field('event_venue'); ?></dd>
                   </div>
                   <div>
                     <dt>テーマ</dt>
-                    <dd>〇〇〇</dd>
+                    <dd><?php the_field('event_theme'); ?></dd>
                   </div>
                   <div>
                     <dt>対象者</dt>
-                    <dd>〇〇〇</dd>
+                    <dd><?php the_field('event_person'); ?></dd>
                   </div>
                 </dl>
               </div>
             </li>
+
+          <?php
+              endforeach;
+            endif;
+            wp_reset_postdata();
+          ?>
           </ul>
 
           <p class="top__section__btn btn-01">

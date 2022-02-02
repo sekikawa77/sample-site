@@ -136,6 +136,10 @@
       position: relative;
       padding-left: 20px;
 
+      &:hover {
+        text-decoration: underline;
+      }
+
       &::before {
         content: "";
         width: 12px;
@@ -172,6 +176,10 @@
       font-size: 1.4rem;
       position: relative;
       padding-left: 20px;
+
+      &:hover {
+        text-decoration: underline;
+      }
 
       &::before {
         content: "";

@@ -17,7 +17,7 @@ Template Name: company
 
         <ul class="breadcrumb">
           <li>
-            <a href="/">ホーム</a>
+            <a href="<?php echo home_url('/'); ?>">ホーム</a>
           </li>
           <li>会社情報</li>
         </ul>

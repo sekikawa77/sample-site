@@ -80,6 +80,11 @@
         align-items: center;
         text-decoration: none;
         color: inherit;
+        transition: .2s;
+
+        &:hover {
+            opacity: .7;
+        }
     }
     
 }

@@ -23,6 +23,10 @@
             font-size: 1.8rem;
             font-weight: bold;
             text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -39,6 +43,10 @@
             text-decoration: none;
             position: relative;
 
+            &:hover {
+                text-decoration: underline;
+            }
+            
             &::before {
                 content: "-";
                 padding-right: 5px;
