@@ -7,14 +7,13 @@ function custom_post_type() {
         array(
             'label' => 'お知らせ',
             'public' => true,
-            'hierarchical' => true,
             'has_archive' => true,
-            'supports' => array('title', 'editor', 'thumbnail')
+            'supports' => array('title', 'editor'),
         )
     );
 
     register_taxonomy(
-        'news-cate',
+        'news_cate',
         'news',
         array(
             'label' => 'カテゴリー',

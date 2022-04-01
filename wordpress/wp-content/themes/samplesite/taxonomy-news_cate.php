@@ -32,30 +32,23 @@
                     $taxonomy_terms = get_terms('news_cate');
                     foreach ( $taxonomy_terms as $taxonomy_term ):
                   ?>
-                    <li><a href="<?php echo get_term_link($taxonomy_term); ?>" class="<?php if($taxonomy_term->slug === $term){ echo 'current'; } ?>"><?php echo $taxonomy_term->name; ?></a></li>
+                    <li><a href="<?php echo get_term_link($taxonomy_term); ?>" class="<?php if($taxonomy_term->slug === $term){ echo 'is-current'; } ?>"><?php echo $taxonomy_term->name; ?></a></li>
                   <?php
                     endforeach;
                   ?>
-                  
                   </ul>
                 </dd>
               </div>
             </dl>
 
             <?php
+              $term = wp_get_object_terms($post->ID, 'news_cate');
               $paged = get_query_var('paged')? get_query_var('paged') : 1;
-              $args = array(
-                'post_type' => 'news',
-                'paged' => $paged,
-                'posts_per_page' => 10,
-              );
-
-              $the_query = new WP_Query($args);
             ?>
 
             <ul class="list__news">
-              <?php if($the_query -> have_posts()):
-                while($the_query -> have_posts()) : $the_query -> the_post();
+              <?php if(have_posts()):
+                while(have_posts()) : the_post();
               ?>
               <li class="list__news__item">
                 <a href="<?php the_permalink(); ?>">

@@ -321,7 +321,7 @@
                   <p class="list__news__item__date"><?php echo get_the_date(); ?></p>
                   <p class="list__news__item__cate">
                     <?php
-                      $term = get_the_terms($post->ID,'news-cate');
+                      $term = get_the_terms($post->ID,'news_cate');
                       echo $term[0]->name;
                     ?>
                   </p>

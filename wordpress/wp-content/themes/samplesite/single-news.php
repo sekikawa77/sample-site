@@ -29,7 +29,7 @@
             <div class="detail__header">
               <p class="detail__header__date"><span class="category">
                 <?php
-                  $term = get_the_terms($post->ID,'news-cate');
+                  $term = get_the_terms($post->ID,'news_cate');
                   echo $term[0]->name;
                 ?>
               </span><?php echo get_the_date(); ?></p>

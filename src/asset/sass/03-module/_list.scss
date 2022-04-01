@@ -313,3 +313,49 @@
         }
     }
 }
+
+.list__cate {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    > li {
+        > a {
+            text-decoration: none;
+            color: inherit;
+            padding-left: 30px;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 20px;
+                height: 20px;
+                border: 2px solid #ccc;
+                border-radius: 3px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            &.is-current {
+                &::before {
+                    background-color: #0070C5;
+                    border-color: #0070C5;
+                }
+                &::after {
+                    content: "";
+                    border-right: 2px solid #fff;
+                    border-bottom: 2px solid #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 6px;
+                    margin-top: -10px;
+                    width: 9px;
+                    height: 13px;
+                    transform: rotate(45deg);
+                }
+            }
+
+        }
+    }
+}
