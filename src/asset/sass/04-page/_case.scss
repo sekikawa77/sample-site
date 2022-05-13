@@ -40,9 +40,13 @@
 }
 
 .case-detail__company {
-    display: flex;
-    justify-content: space-between;
+
     margin-top: 20px;
+
+    @include tab {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .case-detail__company__desc {
@@ -57,5 +61,12 @@
 }
 
 .case-detail__company__image {
-    width: 280px;
+    margin: 10px auto 0;
+    text-align: center;
+
+    @include tab {
+        width: 280px;
+        flex: 0 0 280px;
+        margin-top: 0;
+    }
 }

@@ -2,14 +2,29 @@
   list
 ---------------------------------*/
 .list__card-01 {
-    display: flex;
-    gap: 30px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+    margin: 40px auto 0;
+    max-width: 380px;
+
+    @include tab {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        max-width: none;
+    }
 }
 
 .list__card-01__item {
-    width: calc(33.33% - 20px);
+    margin-top: 30px;
+
+
+    @include tab {
+        width: calc(33.33% - 20px);
+        margin-top: 0;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
 
     &.is-finished {
         .list__card-01__image {
@@ -83,8 +98,11 @@
     > a {
         text-decoration: none;
         color: inherit;
-        display: flex;
-        align-items: center;
+
+        @include tab {
+            display: flex;
+            align-items: center;
+        }
     }
 }
 
@@ -183,11 +201,15 @@
 
     > a {
         text-decoration: none;
-        display: flex;
-        align-items: center;
         color: inherit;
         padding: 20px 0;
         transition: .2s;
+        display: block;
+
+        @include tab {
+            display: flex;
+            align-items: center;
+        }
 
         &:hover {
             opacity: .7;
@@ -205,7 +227,6 @@
     font-size: 1.6rem;
     font-weight: bold;
     margin-right: 20px;
-    width: 170px;
 }
 
 .list__news__item__cate {

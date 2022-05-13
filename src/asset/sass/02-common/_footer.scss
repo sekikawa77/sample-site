@@ -7,7 +7,7 @@
 }
 
 .contact__btn {
-  width: 500px;
+  max-width: 500px;
   margin: 30px auto 0;
 
   > a {
@@ -19,8 +19,14 @@
 .contact__tel {
   margin-top: 30px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+
+  @include tab {
+    flex-direction: row;
+    justify-content: center;
+  }
+
 }
 
 .contact__tel__text {
@@ -54,15 +60,20 @@
 
 .contact__tel__box {
   margin: 40px auto 0;
-  width: 960px;
+  max-width: 960px;
   background-color: #fff;
   padding: 30px;
+
 }
 
 .contact__tel__box__col2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+
+  @include tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .contact__tel__box__col {
@@ -83,6 +94,7 @@
   font-size: 1.8rem;
   font-weight: bold;
   margin-right: 20px;
+  flex: 0 0 60px;
 }
 
 .contact__tel__box__text {
@@ -91,8 +103,17 @@
 }
 
 .contact__tel__box__btn {
-  width: 300px;
-  
+  max-width: 300px;
+  margin: 10px auto 0;
+
+  @include tab {
+    flex: 0 0 300px;
+    margin-top: 0;
+    margin-left: 20px;
+    width: 300px;
+  }
+
+
   > a {
     font-size: 1.6rem;
     font-weight: bold;
@@ -106,8 +127,12 @@
 }
 
 .footer__item {
-  display: flex;
-  justify-content: space-between;
+
+
+  @include pc {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer__adress {
@@ -115,11 +140,26 @@
 }
 
 .footer__navs {
-  display: flex;
+  margin-top: 20px;
+
+  @include tab {
+    display: flex;
+  }
 }
 
 .footer__links {
-  margin-left: 30px;
+  margin-top: 18px;
+
+  @include tab {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+
+  &:first-child {
+    @include tab {
+      margin-left: 0;
+    }
+  }
 
   > li {
     margin-top: 18px;

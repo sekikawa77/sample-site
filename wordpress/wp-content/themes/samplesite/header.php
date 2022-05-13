@@ -20,6 +20,9 @@
       <p class="header__logo">
         <a href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri();?>/asset/images/logo.png" alt=""></a>
       </p>
+      <button class="sp__btn" type="button">
+        <span></span>
+      </button>
       <nav class="header__nav">
         <ul> 
           <li><a href="<?php echo home_url('/'); ?>">ホーム </a></li>

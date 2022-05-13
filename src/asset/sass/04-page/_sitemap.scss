@@ -3,14 +3,21 @@
 ---------------------------------*/
 
 .sitemap {
-    display: flex;
+
     border-right: 1px solid #ccc;
+
+    @include tab {
+        display: flex;
+    }
 }
 
 .sitemap__list {
-    width: 25%;
-    padding-left: 40px;
     border-left: 1px solid #ccc;
+
+    @include tab {
+        width: 25%;
+        padding-left: 40px;
+    }
 
     > li {
         margin-top: 20px;
