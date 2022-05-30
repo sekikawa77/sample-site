@@ -190,17 +190,19 @@
           <ul class="list__card-01">
           <?php
             $args = array(
-              //'numberposts' => -1,
+              'numberposts' => 2,
               'post_type' => 'event',
-              'order' => 'DESC',
-              'orderby' => 'event_deadline',
+              'order' => 'ASC',
               'meta_key' => 'event_deadline',
-              'meta_value' => date('Y-m-d'),
+              'orderby' => 'meta_value',
+              'meta_value' => date('Ymd'),
               'meta_compare' => '>=',
             );
 
-            $posts = get_posts($args);
-            if($posts) : foreach ($posts as $post) : setup_postdata($post);
+            $posts = get_posts( $args );
+
+            if( $posts ) : foreach( $posts as $post ) : setup_postdata( $post );
+
           ?>
 
             <li class="list__card-01__item">
@@ -235,26 +237,27 @@
                 </p>
               </div>
             </li>
-          <?php
-              endforeach;
-            endif;
-            wp_reset_postdata();
-          ?>
+            <?php endforeach; ?>
+            <?php endif;?>
+            <?php wp_reset_postdata(); ?>
 
-          <?php
-            $args = array(
-              //'numberposts' => -1,
-              'post_type' => 'event',
-              'order' => 'DESC',
-              'orderby' => 'event_deadline',
-              'meta_key' => 'event_deadline',
-              'meta_value' => date('Y-m-d'),
-              'meta_compare' => '<',
-            );
+            <?php
+              $args = array(
+                'numberposts' => 1,
+                'post_type' => 'event',
+                'order' => 'ASC',
+                'meta_key' => 'event_deadline',
+                'orderby' => 'meta_value',
+                'meta_value' => date('Ymd'),
+                'meta_compare' => '<=',
+              );
 
-            $posts = get_posts($args);
-            if($posts) : foreach ($posts as $post) : setup_postdata($post);
-          ?>
+              $posts = get_posts( $args );
+
+              if( $posts ) : foreach( $posts as $post ) : setup_postdata( $post );
+
+            ?>
+            <?php endforeach; ?>
             <li class="list__card-01__item is-finished">
               <div class="list__card-01__image">
                 <img src="<?php the_field('event_image'); ?>" alt="">
@@ -283,12 +286,8 @@
                 </dl>
               </div>
             </li>
-
-          <?php
-              endforeach;
-            endif;
-            wp_reset_postdata();
-          ?>
+            <?php endif;?>
+            <?php wp_reset_postdata(); ?>
           </ul>
 
           <p class="top__section__btn btn-01">
